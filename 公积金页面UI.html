@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>住房公积金页面</title>
+</head>
+<link type="text/css" href="js/Semantic-UI-CSS-master/semantic.min.css" rel="stylesheet">
+<link type="text/css" href="js/umeditor/themes/default/css/umeditor.css" rel="stylesheet">
+<style type="text/css">
+	#addEditor .hint{font-size: 14px;color: #999999;}
+	.btns .item{margin:10px 0 10px 15px;float:left;}
+</style>
+<body>
+	<!-- 边栏 -->
+	<div class="ui left vertical labeled inverted icon sidebar menu">
+		<a class="item">
+			<i class="home icon"></i>
+			主页
+		</a>
+		<a class="item">
+			<i class="block layout icon"></i>
+			主题
+		</a>
+		<a class="item">
+			<i class="smile icon"></i>
+			朋友
+		</a>
+		<a class="item">
+			<i class="calendar icon"></i>
+			历史
+		</a>
+		<a class="item">
+			<i class="mail icon"></i>
+			消息
+		</a>
+		<a class="item">
+			<i class="chat icon"></i>
+			讨论
+		</a>
+		<a class="item">
+			<i class="trophy icon"></i>
+			奖励
+		</a>
+		<a class="item">
+			<i class="settings icon"></i>
+			设置
+		</a>
+	</div>
+	<div class="pusher">
+		<div class="ui internally celled grid">
+			<div class="row" >
+				<div id="pushMenu" class="ui top fixed inverted button">
+					<div class="ui inverted orange button"><i class="content icon"></i>菜单</div>
+				</div>
+			</div>
+			<div class="row btns">
+				<div class="left menu">
+					<div class="item">
+						<button class="ui green button showDialog"><i class="icon plus"></i> 添 加 知 识 库</button>
+					</div>
+					<div class="item">
+						<button class="ui facebook button showDialog"><i class="icon write"></i> 编 辑 知 识库</button>
+					</div>
+					<div class="item">
+						<button class="ui youtube button deleteBtn"><i class="icon remove"></i> 删 除 知 识 库</button>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column">
+					<table class="ui blue sortable selectable celled striped compact table">
+						<thead>
+							<tr>
+								<th class="one wide">选择</th>
+								<th class="five wide">标题1</th>
+								<th class="five wide">标题2</th>
+								<th class="five wide">标题3</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr id="tr1">
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>1111111</td>
+								<td>bell</td>
+								<td>Cell</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>aell</td>
+								<td>Cell</td>
+								<td>tell</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>Cell</td>
+								<td>rell</td>
+								<td>Cell</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>Cell</td>
+								<td>well</td>
+								<td>lell</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>aell</td>
+								<td>Cell</td>
+								<td>sell</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>aell</td>
+								<td>Cell</td>
+								<td>sell</td>
+							</tr>
+							<tr>
+								<td>
+									<div class="ui radio checkbox">
+										<input type="radio" name="selectAnswer" tabindex="0" class="hidden">
+									</div>
+								</td>
+								<td>aell</td>
+								<td>Cell</td>
+								<td>sell</td>
+							</tr>
+						</tbody>
+						<tfoot>
+							<tr><th colspan="4">
+								<div class="ui right floated pagination menu">
+									<a class="icon item">
+										<i class="left chevron icon"></i>
+									</a>
+									<a class="item">1</a>
+									<a class="item">2</a>
+									<a class="item">3</a>
+									<a class="item">4</a>
+									<a class="icon item">
+										<i class="right chevron icon"></i>
+									</a>
+								</div>
+							</th></tr>
+						</tfoot>
+					</table>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	
+	<!-- 添加知识库对话框 -->
+	<div class="ui small modal transition" style="height: 432px">
+		<i class="close icon"></i>
+		<div class="header">添加知识库</div>
+		<div class="content">
+			<div id='addAsks' style="overflow-y:auto;max-height:150px">
+				<div class="firstAsk">
+					<div class="ui small form">
+						<div class="inline required fields">
+							<div class="fourteen wide field">
+								<label style="width: 75px;">问题内容:</label>
+								<input type="text" name='askValue' placeholder="输入问题..."><i class="blue large plus icon" style="width: 40px;"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div style="overflow-y: auto;height: 222px;width: 100%;">
+				<script type="text/plain" id="addEditor" style="overflow-y:auto;height:155px;width: 616px;">
+					<p class="hint">请输入问题对应答案...</p>
+				</script>
+			</div>
+			<div class="ui divider"></div>
+			<div class="actions inverted segment">
+				<button class="ui right floated red inverted cancel button">
+					<i class="remove icon"></i>取消
+				</button>
+				<button class="ui right floated green inverted ok button">
+					<i class="checkmark icon"></i>添加
+				</button>
+			</div>
+		</div>
+	</div>
+			
+
+	<script type="text/javascript" src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/Semantic-UI-CSS-master/semantic.min.js"></script>
+	<script type="text/javascript" src="js/tablesort.js"></script>
+	<script type="text/javascript" src="js/layer/layer.js"></script>
+
+	<script type="text/javascript" charset="utf-8" src="js/umeditor/umeditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="js/umeditor/umeditor.min.js"></script>
+	<script type="text/javascript" src="js/umeditor/lang/zh-cn/zh-cn.js"></script>
+</body>
+</html>
+<script type="text/javascript">
+	$(".toggle.checkbox").checkbox();
+
+	$(document).ready(function() {
+		$('.ui.rating').rating();
+		$('.ui.rating').rating({clearable: true});
+		$('.red.icon').popup();
+	});
+</script>
+<script type="text/javascript">
+	$("#testBtn").on('click', function(){alert()});
+	//边栏
+	$('.left.sidebar').first()
+		.sidebar('attach events', '#pushMenu', 'show')
+		.sidebar('setting', 'uncover');
+		//.sidebar('toggle');
+
+	//$('table').tablesort();//加排序呢以后点击行选中有问题
+	$('.ui.radio.checkbox').checkbox();
+
+	$('.showDialog').on('click',function(){
+		$('.modal').modal({
+			//closable  : false,
+			onDeny : function(){
+				window.alert('清空表单!');
+			},
+			onApprove : function() {
+				window.alert('发送ajax!');
+					$('form').submit();
+					return false;
+				}
+			})
+		.modal('show');
+		//留言答案输入框
+		$('#addEditor').on('click', function(){
+			var hint = $(this).find('.hint').length;
+			if(hint){
+				$(this).empty();
+			}
+		});
+		$('#addEditor').on('blur', function(){
+			var isempty = $(this).text().trim();
+			if(!isempty){
+				$(this).html('<p class="hint">请输入留言对应答案...</p>');
+			}
+		});
+	});
+
+	$('tbody tr').on('click',function(){
+		$('tbody tr').each(function(){
+			if($(this).hasClass('active')){
+				$(this).removeClass('active');
+			}
+		});
+		$(this).addClass('active');
+		$(this).find('input:radio').prop('checked','checked');
+	});
+
+	$('.deleteBtn').on('click', function(){
+		var checkedTr = $('tbody tr.active').length;
+		if(!checkedTr){
+			layer.msg("请选中一行！", {time: 2000, icon:0});
+		}else{
+			var asklayer = layer.confirm('确定要忽略吗？', {
+				icon: 0,
+				btn: ['忽略','取消'] //按钮
+			}, function(){
+				layer.close(asklayer);
+				$('tbody tr.active').remove();
+				layer.msg("删除成功！", {time: 2000, icon:1});
+			}, function(){});
+		}
+	});
+
+	var um = UM.getEditor('addEditor');
+
+	var validateform = $('form');
+		validateform.form({
+			on: 'blur',
+			fields: {
+				askValue: {
+					identifier  : 'askValue',
+					rules: [
+					{
+						type   : 'empty',
+						prompt : 'Please enter a value'
+					}
+					]
+				}
+			}
+		});
+</script>

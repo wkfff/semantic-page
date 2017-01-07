@@ -5,5 +5,5 @@
 ![Image text](https://raw.githubusercontent.com/zhangyuanliang/UI/master/img_1.jpg)
 ###菜单
 ![Image text](https://raw.githubusercontent.com/zhangyuanliang/UI/master/img_2.jpg)
-###编辑
+###添加
 ![Image text](https://raw.githubusercontent.com/zhangyuanliang/UI/master/img_3.jpg)

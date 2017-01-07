@@ -280,9 +280,9 @@
 		if(!checkedTr){
 			layer.msg("请选中一行！", {time: 2000, icon:0});
 		}else{
-			var asklayer = layer.confirm('确定要忽略吗？', {
+			var asklayer = layer.confirm('确定要删除吗？', {
 				icon: 0,
-				btn: ['忽略','取消'] //按钮
+				btn: ['删除','取消'] //按钮
 			}, function(){
 				layer.close(asklayer);
 				$('tbody tr.active').remove();
